@@ -1,2 +1,5 @@
 # Multitool-in-batch-script
-it is a multitool that is made in batch script for windows
+
+ This is a multitool written in batch script for windows. 
+ It is a useful multitool that does various functions but needs improvement
+ 
