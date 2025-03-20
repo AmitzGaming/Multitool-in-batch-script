@@ -1,0 +1,26 @@
+::Align.bat
+An alignment wizard for cmd console window | by Sounak@9434
+Have you ever wanted to have a text echoed at the right side of the screen?
+Or to have a center-align feature like in Microsoft word?
+In that case this is the right tool for you
+
+::Usage
+>>>Print Help File
+	call align.bat /?
+	[requires help.txt to be in the same directory]
+>>>Basic Usage
+	call align.bat [/m|/r] "TEXT"
+>>>Output to a Variable
+	call align.bat [/m|/r] "TEXT" var
+
+Align.bat sets the window size the first time it runs to speed up calculations
+for future. If window size is manually changed you have to run align.bat with
+a /s switch which will reset the window size.
+
+>>>Set window size(once again)
+	call align.bat /s
+
+Calling align.bat with an additional /s switch sets up the columns value again.
+So till you Change the screen size again you don't need to use an /s switch
+I don't think any update is needed but if you want a special feature just mail 
+me at 'www.sounak9434@gmail.com'.

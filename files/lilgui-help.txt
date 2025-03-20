@@ -1,0 +1,49 @@
+::Lilgui.bat
+Show simple CUI(Character User Interface) based graphics in cmd screen.
+Show RPG style graphics in cmd window.
+
+::Usage
+>>>Switches
+	/h[Height] [int]
+		{Defines the height of the printed window}
+		{DEFAULT=5}
+	/w[Width] [int]
+		{Defines the width of the printed window}
+		{DEFAULT=5}
+	/a[Ascii] [char]
+		{Defines box drawing character}
+		{DEFAULT=2}
+		0(basic graphics with -,|)
+		1(single layer box drawing)
+		2(Double layer box drawing)
+		Any other charecter(if provided) will be used as character
+	/pc[Player Character] [char]
+		{defines player character to be used}
+		{DEFAULT=P}
+	/fc[Finishing Character] [char]
+		{defines finishing character}
+		{DEFAULT=F}
+		if reached finishing cell errorlevel=1, _out=finish
+	/s[Start cell] [xpos-ypos]
+		{defines starting cell}
+		{DEFAULT=%/h%-%/w%(to be expanded)}
+	/f[Finishing cell] [xpos-ypos]
+		{defines finishing cell}
+		{DEFAULT=1-1}
+	/t[Trigger event] ["xpos-ypos xpos-ypos xpos-ypos....."]
+		{defines event triggering cells}
+		{DEFAULT=null}
+		Multiple cells can be used in a "[list]"
+		if reached any lilgui exits with errorlevel=2, _out=event:xpos:ypos
+	/tc[Trigger event character] [char]
+		{defines event triggering cell character}
+		{DEFAULT= }
+	/r[Resize window] [1/0]
+		{Resizes the window according to height and width}
+		{DEFAULT=0}
+		0=Off
+		1=On
+	/o[Timeout] [int]
+		{Sets timeout for clearing the round}
+		{DEFAULT=0}
+		0=No Timeout
